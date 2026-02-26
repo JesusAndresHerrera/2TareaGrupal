@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
-    <h:head>
-        <title>Inicio</title>
-    </h:head>
-    <h:body>
-        <h1>Aplicación de ejemplo JSF</h1> 
-         
-        
-    </h:body>
-</f:view>
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>ATM - Menú</title>
+  <h:outputStylesheet library="css" name="atm.css"/>
+</h:head>
+
+<h:body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div>
+          <div class="title">Cajero Automático</div>
+          <div class="subtitle">Selecciona una operación</div>
+        </div>
+        <span class="badge">JSF</span>
+      </div>
+
+      <!-- Botones que envían al login sin parámetros -->
+      <div class="grid">
+        <h:link outcome="login" styleClass="btn">
+          Depositar
+        </h:link>
+
+        <h:link outcome="login" styleClass="btn">
+          Retirar
+        </h:link>
+
+        <h:link outcome="login" styleClass="btn">
+          Consultar saldo
+        </h:link>
+      </div>
+
+      <div style="margin-top:16px; color:#94a3b8;">
+        * Primero debes iniciar sesión con número de cuenta y PIN.
+      </div>
+    </div>
+  </div>
+</h:body>
 </html>
