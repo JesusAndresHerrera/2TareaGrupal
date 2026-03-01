@@ -3,7 +3,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:head>
   <title>ATM - Menú</title>
-  <h:outputStylesheet library="css" name="atm.css"/>
+  <link rel="stylesheet" href="#{request.contextPath}/resources/css/atm.css"/>
 </h:head>
 
 <h:body>
@@ -31,10 +31,10 @@
           Consultar saldo
         </h:link>
       </div>
-
-      <div style="margin-top:16px; color:#94a3b8;">
-        * Primero debes iniciar sesión con número de cuenta y PIN.
-      </div>
+	
+	  <div class="note">
+	     * Primero debes iniciar sesión con número de cuenta y PIN.
+	  </div>
     </div>
   </div>
 </h:body>
